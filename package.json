@@ -1,0 +1,19 @@
+{
+  "name": "blogs",
+  "version": "1.0.0",
+  "description": "作者的个人博客",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MirSpectator/blogs.git"
+  },
+  "author": "王振鹏",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MirSpectator/blogs/issues"
+  },
+  "homepage": "https://github.com/MirSpectator/blogs#readme"
+}
