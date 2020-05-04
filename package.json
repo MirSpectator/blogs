@@ -4,7 +4,9 @@
   "description": "作者的个人博客",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "server": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,41 @@
   "bugs": {
     "url": "https://github.com/MirSpectator/blogs/issues"
   },
-  "homepage": "https://github.com/MirSpectator/blogs#readme"
+  "homepage": "https://github.com/MirSpectator/blogs#readme",
+  "dependencies": {
+    "popper.js": "^1.16.1",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.8.3",
+    "vue-router": "^3.1.5",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^3.4.0",
+    "file-loader": "^5.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.0.2",
+    "url-loader": "^4.0.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie < 11",
+    "last 2 versions",
+    "> 1%",
+    "iOS 7",
+    "last 3 iOS versions"
+  ]
 }

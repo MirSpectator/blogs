@@ -1,0 +1,43 @@
+/* 首页的css */
+$time: 100s linear infinite;
+$animation_name_cc: cc;
+$animation_name_da: da;
+$image_preview: '../image/preview.jpg';
+$image_midground: '../image/midground.png';
+$image_foreground: '../image/foreground.png';
+$index_zero: 0;
+$index_one: 1;
+$index_two: 2;
+$index_three: 3;
+$index_four: 4;
+$font-CURSIVE: CURSIVE;
+@keyframes cc {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 600% 0;
+	}
+}
+
+@keyframes da {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 0 600%;
+	}
+}
+/*  */
+
+@keyframes title {
+	0% {
+		opacity: 0.6;
+	}
+	50% {
+		opacity: 0.8;
+	}
+	100% {
+	    opacity: 1;
+	}
+}

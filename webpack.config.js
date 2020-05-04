@@ -5,15 +5,18 @@ const webpack = require('webpack')
 
 module.exports = {
 	mode: 'development',
-	entry: path.resolve(__dirname,'src/main.js'),
+	entry: {
+		app: ['babel-polyfill', path.resolve(__dirname,'src/main.js')]
+	},
 	output: {
 		filename: 'main.js',
 		path: path.join(__dirname, 'dist')
 	},
 	module: {
 		rules: [
-			{ test: /\.css$/, use: ['style-loader','css-loader','postcss-loader'] },
+			{ test: /\.(css|scss|sass)$/, use: ['style-loader','css-loader','sass-loader',] },
 			{ test: /\.vue$/, use: 'vue-loader' },
+			{ test: /\.(jpg|png|gif|bmp|jepg)$/, use:'url-loader?limit=13150&name=[hash:8]-[name].[ext]'},
 			{ test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ },
 			{ test: /\.(eot|woff|woff2|svg|ttf|otf)$/, use: "file-loader" }
 		]
@@ -26,13 +29,15 @@ module.exports = {
 				hash: true ,//hash值
 			}),
 			new vueLoaderPlugin(),
+			
+			  /*  配置的jquery
 			  new webpack.ProvidePlugin({
 			   $: "jquery",
 			   jQuery: "jquery",
 			   jquery: "jquery",
 			   "window.jQuery": "jquery",
 			   "window.$": "jquery",
-			  })
+			  }) */
 		],
 	devServer: {
 		contentBase: './dist',

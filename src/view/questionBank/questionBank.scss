@@ -1,0 +1,172 @@
+/* 导航栏 */
+/deep/.nav{
+		float: left;
+		width: 70%;
+		padding-left: 15%;
+		padding-right: 15%;
+		background-color: rgb(0,0,0);
+		list-style: none;
+		color: white;
+		line-height: 50px;
+		font-size: 1.2rem;
+		opacity: 0.7;
+		li{
+			padding: 0 10px;
+			float: left;
+		    &:nth-child(n+5){
+				float: right;
+			}
+			&:hover{
+				background-color: #626466;
+			}
+		} 
+		
+	}
+/* 中间内容 */
+/deep/.content{
+	padding-left: 15%;
+	padding-right: 15%;
+	width: 70%;
+	padding-top: 5%;
+	display: flex;
+	.content_left{
+		line-height: 40px;
+		.active{
+			background-color: deepskyblue;
+			color: white;
+			span{
+				border-top: 2px solid white;
+				border-right: 2px solid white;
+			}
+		}
+		div{
+			border-radius: 2px;
+			text-align: center;
+			width: 110px;
+			border: solid #DCDCDC 1px;
+			padding: 0 10px;
+			list-style: none;
+			display: flex;
+			border-bottom: 0;
+			&:last-child{
+				border-bottom: solid #DCDCDC 1px;
+			}
+			img{
+				width: 20px;
+				height: 20px;
+				margin: auto auto;
+			}
+			li{
+				padding: 0 5px;
+			}
+			span{
+				  width: 10px;
+				  height: 10px;
+				  border-top: 2px solid black;
+				  border-right: 2px solid black;
+				  transform: rotate(45deg);
+				  margin: auto auto;
+			}
+		}
+	}
+	.content_right{
+		margin-left: 2%;
+		border: solid 1px #DCDCDC;
+		width: 100%;
+		text-align: center;
+		.button{
+			button{
+				width: 100px;
+				line-height: 30px;
+				font-size: 1.5rem;
+				margin-top: 50px;
+				margin-bottom: 50px;
+			}
+			.submit{
+				width: 200px;
+				margin-top: 150px;
+				margin-bottom: 100px;
+				line-height: 50px;
+			}
+		}
+		.content_right_nav_first{
+			list-style: none;
+			display: flex;
+			background-color: #DCDCDC;
+			.active{
+				color: white;
+				background-color: black;
+				opacity: 0.7;
+			}
+			li{
+				width: 18%;
+				text-align: center;
+				line-height: 50px;
+			}
+		}
+		.content_right_nav_two{
+			list-style: none;
+			display: flex;
+			border-bottom: solid 1px #DCDCDC;
+			.radio{
+				line-height: 50px;
+				display: flex;
+				margin-right: 15px;
+				div{
+					margin-left: 10px;
+					margin-right: 5px;
+				}
+				input{
+					margin: auto 0;
+				}
+			}
+		}
+		.content_right_question_type{
+			display: flex;
+			border-bottom: solid 1px #DCDCDC;
+			.radio{
+				line-height: 50px;
+				width: 15%;
+				display: flex;
+				input{
+					margin: auto 0;
+				}
+				div{
+					text-align: center;
+					margin-left: 10px;
+					margin-right: 5px;
+				}
+			}
+		}
+		.examination{
+			padding: 10px;
+			  .examination_nav{
+				  font-size: 1.2rem;
+			  }
+			  .examination_title{
+				  color: red;
+				  line-height: 30px;
+				  span{
+					  margin: 20px;
+				  }
+			  }
+		      .examination_content{
+				  .examination_content_topic{
+					  
+				  }
+				  .examination_content_image{
+					  width: 80%;
+					  height: 80%;
+					  margin: 10%;
+					   img{
+					   					  margin: auto auto;
+					   					  width: 100%;
+					   					  height: 100%;
+					   }  
+				  }
+				    line-height: 30px;
+				    text-align: left;
+			  }	
+		}
+	}
+}

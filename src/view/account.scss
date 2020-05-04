@@ -1,0 +1,53 @@
+@import 'account.mixins';
+@import '../scss/variables';
+@import  '../scss/alert';
+.background {
+	@include animation(url($image_preview) no-repeat, dd $time, $index_zero) background-size: cover;
+}
+.hove_first {
+	@include animation(url($image_midground), $animation_name_cc $time, $index_one);
+}
+.hove_two {
+	@include animation(url($image_foreground), $animation_name_cc $time, $index_two);
+}
+.hove_three {
+	@include animation(url($image_midground), $animation_name_da $time, $index_three);
+}
+/* 首页标题 */
+.title {
+	z-index: 4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  	/deep/.nav {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+		list-style: none;
+		font-weight: 500;
+		 li {
+			opacity: 0.5;
+			transition: all 1s;
+			letter-spacing: 5px;
+			&:first-child {
+				text-align: center;
+				line-height: 50px;
+				font-size: 30px;
+				margin-bottom: 10px;
+			}
+			&:nth-child(n + 2) {
+				margin: 0 40px;
+				float: left;
+			}
+			&:hover {
+				opacity: 1;
+				transform:scale(2);
+			}
+		}
+	}
+}
+
